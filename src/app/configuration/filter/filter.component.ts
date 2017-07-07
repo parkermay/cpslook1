@@ -42,8 +42,12 @@ export class FilterComponent implements OnInit {
     }
 
     performSearch(): void {
-        
         console.log(`filter = ${JSON.stringify(this.filter)}`);
+        debugger;
+    }
+
+    saveChanges(): void {
+        debugger;
     }
 
     selectSavedFilter(commonOption: string): void {
