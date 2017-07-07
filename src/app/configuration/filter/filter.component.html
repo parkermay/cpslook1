@@ -26,13 +26,8 @@
     <div class="col-lg-6">
       <div class="form-group">
         <label>Name matching options</label>
-        <!--{{view "select" value=options content=filterOptions class="form-control"}}-->
         <select [(ngModel)]="filter.options" class="form-control">
-           <option>Exact match</option>
-           <option>Starts with</option>
-           <option>Ends with</option>
-           <option>Contains</option>
-           <option>Regular expression</option>
+          <option *ngFor="let option of commonOptions">{{option}}</option>
         </select>
       </div>
     </div>
