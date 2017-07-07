@@ -1,0 +1,86 @@
+  <!--<h3 class="page-header col15">Configuration Properties <button {{action "refresh"}} class="btn btn-default btn-right"> Refresh</button></h3>-->
+  <h3 class="page-header col15">Configuration Properties <button class="btn btn-default btn-right"> Refresh</button></h3>
+
+
+<div class='panel-body'>
+  <div class="row">
+    <h4 class="col15">Filter by:</h4>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="form-group">
+        <label>Path</label> 
+        <!--{{input type="text" value=path class="form-control" name="path" placeholder="Enter configuration property path. Example: cps-ERX-WEG"}}-->
+        <input type="text" class="form-control" name="path" placeholder="Enter configuration property path. Example: cps-ERX-WEG">
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="form-group">
+        <label>Name</label>
+        <!--{{input type="text" value=key class="form-control" placeholder="Enter configuration property name. Example: days.expire"}}-->
+        <input type="text" class="form-control" placeholder="Enter configuration property name. Example: days.expire">
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="form-group">
+        <label>Name matching options</label>
+        <!--{{view "select" value=options content=filterOptions class="form-control"}}-->
+        <select class="form-control">
+           <option>Exact match</option>
+           <option>Starts with</option>
+           <option>Ends with</option>
+           <option>Contains</option>
+           <option>Regular expression</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <label></label>
+      <div class="checkbox">
+        <label>
+          <!--{{input type="checkbox" checked=caseSensitive}}Case sensitive when matching name-->
+          <input type="checkbox" checked=caseSensitive>Case sensitive when matching name
+        </label>
+      </div>
+    </div>
+  </div>
+  
+    <div class="row">
+      <div class="text-right col15">
+
+        <div class="btn-group">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Common filter options <span class="caret"></span>
+                </button>
+          <ul class="dropdown-menu">
+            <!--<li><a {{action "savedFilter" "vendorLicense"}}>Vendor licenses</a></li>
+            <li><a {{action "savedFilter" "selfCountLicense"}}>Self-directed PMS-level licenses</a></li>
+            <li><a {{action "savedFilter" "selfMpsaLicense"}}>Self-directed MPSA-level licenses</a></li>
+            <li><a {{action "savedFilter" "availableProgramTags"}}>Available program tags</a></li>-->
+            <li><a href="#">Vendor licenses</a></li>
+            <!--<li><a>Self-directed PMS-level licenses</a></li>
+            <li><a>Self-directed MPSA-level licenses</a></li>
+            <li><a>Available program tags</a></li>-->
+          </ul>
+        </div>
+
+        <!--<button class="btn btn-default" {{action "find"}} {{bind-attr disabled="canNotFind" }}>Find most specific value</button>-->
+        <button class="btn btn-default">Find most specific value</button>
+
+        <!--<button class="btn btn-primary" {{action "filter"}} {{bind-attr disabled="canNotFilter" }}>Filter</button>-->
+        <button class="btn btn-primary">Filter</button>
+      </div>
+    </div>
+    
+    <!--{{#if isLicenseTagEntry}}
+    <div align="right"><label><h6>
+          		The three possible values for License Entry are <b>true, false, or Expiring Date(MM/DD/YYYY)</b>.
+          	</h6></label> </div>
+    {{/if}}
+    </div>-->
+  
+</div>

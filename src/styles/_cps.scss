@@ -1,0 +1,160 @@
+@media screen and (min-width: 600px) {
+    .wide-dialog {
+        width: 90%; /* either % (e.g. 60%) or px (400px) */
+    }
+}    
+.modal-open {
+    overflow: scroll;
+}
+
+.loading-pane {
+  margin: 75px auto;
+}
+
+.loading-message {
+  text-align: center;
+  color: #aaa;
+}
+
+.spinner {
+  background: url('assets/images/ajax-loader.gif') no-repeat;
+  height: 31px;
+  width: 31px;
+  margin: 0 auto;
+}
+
+.navbar-inverse {
+  background-color: #336699;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #FFFFFF;
+}
+
+.table-hover > tr > th {
+  vertical-align: top;
+  border: 1px solid #dddddd;
+  border-bottom: 2px solid #dddddd;
+  padding-top: 10px;
+  padding-right: 0px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.table-hover > tr > td {
+  vertical-align: top;
+  border: 1px solid #dddddd;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.navbar-nav li:hover {
+    cursor: pointer;
+}
+
+
+.btn-disabled{
+  color:#999999;
+  cursor: not-allowed;
+  border:#EEEEEE;
+  opacity:.9;
+  }
+.btn-disabled:hover{
+  color:#999999;
+  cursor: not-allowed;
+  border:#EEEEEE;
+  opacity:.9;
+  }
+.prog-disabled{
+  color:#999999;
+  cursor: not-allowed;
+  opacity:.9;
+  }
+.bg-disabled{
+  background-color:#cccccc;
+  cursor: not-allowed;
+  opacity:.9;
+  }
+.patient-enrolled-status{
+  font-size:14px;
+  color: #ffffff;
+  padding:5px;
+  margin:5px;
+ }
+
+.btn-success.donothover {
+  pointer-events: none;
+ }
+ .btn-primary.donothover {
+  pointer-events: none;
+ }
+ .btn-warning.donothover {
+  pointer-events: none;
+ }
+ .separator{
+	color: #FFFFFF;
+	background-color: #6699cc;
+	font-family: inherit;
+	font-weight: 500;
+	line-height: 1.5;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	font-size: 16px;
+	width: 100%;
+	height: 2.0em;
+	padding-left: 3px;
+	padding-right:3px;
+	padding-bottom:3px;
+	padding-top:3px;	
+}
+
+.pat-prof-navbar{
+  color:#FFFFFF;
+  background-color:#6699cc;
+  width:100%;
+  
+ }
+ .pat-prof-navbar-about{
+  color:#FFFFFF;
+  width:50px;
+  height:35px;
+  text-align:center;
+  
+  font-size:12px;
+  font-weight: bold;
+  text-decoration:none;
+  
+ }
+ .pat-prof-navbar-about:hover{
+  color:#FFFFFF;
+  background-color:#336699;
+  width:50  x;
+  height:35px;
+  text-align:center;
+  cursor: pointer;
+  
+  font-size:12px;
+  text-decoration:none;
+  
+}
+
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: local('GLYPHICONS Halflings');
+}
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+

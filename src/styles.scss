@@ -1,1 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'styles/variables';
+@import '../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap';
+@import 'styles/style';
+@import 'styles/cps';
+@import '../node_modules/handsontable/src/css/handsontable.css';
