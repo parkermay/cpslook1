@@ -21,8 +21,8 @@ export class ConfigurationService {
 
     constructor() { }
 
-    getConfigurationData(filter: Filter): any[] {
-        return this.configurationData;
+    getConfigurationData(filter: Filter): Promise<any[]> {
+        return Promise.resolve(this.configurationData);
     }
 
 }

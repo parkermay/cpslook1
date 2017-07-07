@@ -41,7 +41,7 @@ export class FilterComponent implements OnInit {
 
     performSearch(): void {
         console.log(`filter = ${JSON.stringify(this.filter)}`);
-        this.searchResults = this.configurationService.getConfigurationData(this.filter);
+        this.configurationService.getConfigurationData(this.filter).then(configData => this.searchResults = configData);
     }
 
     saveChanges(): void {
