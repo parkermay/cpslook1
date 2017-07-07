@@ -41,7 +41,8 @@
       <div class="checkbox">
         <label>
           <!--{{input type="checkbox" checked=caseSensitive}}Case sensitive when matching name-->
-          <input type="checkbox" checked=caseSensitive>Case sensitive when matching name
+          <!--<input type="checkbox" [(ngChecked)]="filter.caseSensitive">Case sensitive when matching name-->
+          <input type="checkbox" [(checked)]="filter.caseSensitive">Case sensitive when matching name
         </label>
       </div>
     </div>
@@ -55,10 +56,10 @@
                   Common filter options <span class="caret"></span>
                 </button>
           <ul class="dropdown-menu">
-            <li><a (click)="savedFilter('vendorLicense')">Vendor licenses</a></li>
-            <li><a (click)="savedFilter('selfCountLicense')">Self-directed PMS-level licenses</a></li>
-            <li><a (click)="savedFilter('selfMpsaLicense')">Self-directed MPSA-level licenses</a></li>
-            <li><a (click)="savedFilter('availableProgramTags')">Available program tags</a></li>
+            <li><a (click)="selectSavedFilter('vendorLicense')">Vendor licenses</a></li>
+            <li><a (click)="selectSavedFilter('selfCountLicense')">Self-directed PMS-level licenses</a></li>
+            <li><a (click)="selectSavedFilter('selfMpsaLicense')">Self-directed MPSA-level licenses</a></li>
+            <li><a (click)="selectSavedFilter('availableProgramTags')">Available program tags</a></li>
           </ul>
         </div>
 
@@ -66,8 +67,14 @@
         <button class="btn btn-default">Find most specific value</button>
 
         <!--<button class="btn btn-primary" {{action "filter"}} {{bind-attr disabled="canNotFilter" }}>Filter</button>-->
-        <button class="btn btn-primary">Filter</button>
+        <button class="btn btn-primary" (click)="performSearch()">Filter</button>
       </div>
+    </div>
+
+    <div align="right" *ngIf="isLicenseTagEntry">
+      <label>
+        <h6>The three possible values for License Entry are <b>true, false, or Expiring Date(MM/DD/YYYY)</b>.</h6>
+      </label>
     </div>
     
     <!--{{#if isLicenseTagEntry}}

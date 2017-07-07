@@ -8,20 +8,30 @@ import { Filter } from './filter';
 })
 export class FilterComponent implements OnInit {
 
-    filter: Filter = {
-        path: '',
-        key: '',
-        caseSensitive: false,
-        options: 'Exact Match'
-    };
+    filter: Filter;
+
     isLicenseTagEntry: boolean;
 
-    constructor() { }
+    commonOptions: string[] = ['Exact match', 'Starts with', 'Ends with', 'Contains', 'Regular expression'];
+
+    constructor() {
+        this.filter = {
+            path: 'cps',
+            key: 'freds',
+            caseSensitive: true,
+            options: 'Exact match'
+        };
+    }
 
     ngOnInit() {
     }
 
-    savedFilter(commonOption: string): void {
+    performSearch(): void {
+        
+        console.log(`filter = ${JSON.stringify(this.filter)}`);
+    }
+
+    selectSavedFilter(commonOption: string): void {
         let executeFilter: boolean = false;
 
         switch (commonOption) {
