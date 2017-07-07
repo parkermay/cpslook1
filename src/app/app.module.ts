@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { HotTableModule } from 'ng2-handsontable'
 
@@ -19,6 +20,7 @@ import { ItemComponent } from './configuration/item/item.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HotTableModule
   ],
   providers: [],
