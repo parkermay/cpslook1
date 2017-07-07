@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Filter } from '../filter';
 
 @Injectable()
 export class ConfigurationService {
@@ -20,7 +21,7 @@ export class ConfigurationService {
 
     constructor() { }
 
-    getConfigurationData(): any[] {
+    getConfigurationData(filter: Filter): any[] {
         return this.configurationData;
     }
 

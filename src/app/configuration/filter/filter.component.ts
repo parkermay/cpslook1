@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Filter } from './filter';
+import { Filter } from './../../filter';
 import { ConfigurationService } from '../../service/configuration.service';
 
 @Component({
@@ -41,7 +41,7 @@ export class FilterComponent implements OnInit {
 
     performSearch(): void {
         console.log(`filter = ${JSON.stringify(this.filter)}`);
-        this.searchResults = this.configurationService.getConfigurationData();
+        this.searchResults = this.configurationService.getConfigurationData(this.filter);
     }
 
     saveChanges(): void {
