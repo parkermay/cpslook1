@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Filter } from './filter';
+import { ConfigurationService } from '../../service/configuration.service';
 
 @Component({
   selector: 'app-filter',
   templateUrl: './filter.component.html',
-  styleUrls: ['./filter.component.scss']
+  styleUrls: ['./filter.component.scss'],
+  providers: [ ConfigurationService ]
 })
 export class FilterComponent implements OnInit {
 
@@ -14,28 +16,24 @@ export class FilterComponent implements OnInit {
 
     commonOptions: string[] = ['Exact match', 'Starts with', 'Ends with', 'Contains', 'Regular expression'];
 
-    private searchResults: any[] = [
-        {
-            id: '100000',
-            path: 'cps',
-            name: 'program.tag.license.Pharmaserv',
-            value: 'true'
-        },
-        {
-            id: '100001',
-            path: 'cps-ERX-NDCD01-ERX',
-            name: 'program.tag.license.PCSTest',
-            value: 'false'
-        }
-    ];
+    private searchResults: any[];
 
-    constructor() {
+    constructor(private configurationService: ConfigurationService) {
         this.filter = {
             path: 'cps',
             key: 'freds',
             caseSensitive: true,
             options: 'Exact match'
         };
+
+        this.searchResults = [
+            {
+                id: '',
+                path: '',
+                name: '',
+                value: ''
+            }
+            ];
     }
 
     ngOnInit() {
@@ -43,7 +41,7 @@ export class FilterComponent implements OnInit {
 
     performSearch(): void {
         console.log(`filter = ${JSON.stringify(this.filter)}`);
-        debugger;
+        this.searchResults = this.configurationService.getConfigurationData();
     }
 
     saveChanges(): void {
