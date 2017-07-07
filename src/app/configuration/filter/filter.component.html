@@ -35,9 +35,7 @@
       <label></label>
       <div class="checkbox">
         <label>
-          <!--{{input type="checkbox" checked=caseSensitive}}Case sensitive when matching name-->
-          <!--<input type="checkbox" [(ngChecked)]="filter.caseSensitive">Case sensitive when matching name-->
-          <input type="checkbox" [(checked)]="filter.caseSensitive">Case sensitive when matching name
+          <input type="checkbox" [(ngModel)]="filter.caseSensitive">Case sensitive when matching name
         </label>
       </div>
     </div>
