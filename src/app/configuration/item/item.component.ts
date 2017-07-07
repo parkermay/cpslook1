@@ -14,7 +14,7 @@ export class ItemComponent implements OnInit {
             readOnly: true
         },
         {
-            data: 'path'
+            data: 'nodeId'
         },
         {
             data: 'name'

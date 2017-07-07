@@ -7,13 +7,13 @@ export class ConfigurationService {
     private configurationData: any[] = [
         {
             id: '100010',
-            path: 'cps',
+            nodeId: 'cps',
             name: 'program.tag.license.Pharmaserv',
             value: 'true'
         },
         {
             id: '100011',
-            path: 'cps-ERX-NDCD01-ERX',
+            nodeId: 'cps-ERX-NDCD01-ERX',
             name: 'program.tag.license.PCSTest',
             value: 'false'
         }
