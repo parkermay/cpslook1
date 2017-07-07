@@ -14,6 +14,21 @@ export class FilterComponent implements OnInit {
 
     commonOptions: string[] = ['Exact match', 'Starts with', 'Ends with', 'Contains', 'Regular expression'];
 
+    private searchResults: any[] = [
+        {
+            id: '100000',
+            path: 'cps',
+            name: 'program.tag.license.Pharmaserv',
+            value: 'true'
+        },
+        {
+            id: '100001',
+            path: 'cps-ERX-NDCD01-ERX',
+            name: 'program.tag.license.PCSTest',
+            value: 'false'
+        }
+    ];
+
     constructor() {
         this.filter = {
             path: 'cps',

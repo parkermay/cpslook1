@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-item',
@@ -24,21 +24,6 @@ export class ItemComponent implements OnInit {
         }
     ]
 
-    private data: any[] = [
-        {
-            id: '100000',
-            path: 'cps',
-            name: 'program.tag.license.Pharmaserv',
-            value: 'true'
-        },
-        {
-            id: '100001',
-            path: 'cps-ERX-NDCD01-ERX',
-            name: 'program.tag.license.PCSTest',
-            value: 'false'
-        }
-    ];
-    
     private options = {
         rowHeaders: true,
         contextMenu: [
@@ -47,9 +32,11 @@ export class ItemComponent implements OnInit {
         
     };
 
-  constructor() { }
+    @Input() tableData: any[];
 
-  ngOnInit() {
-  }
+    constructor() { }
+
+    ngOnInit() {
+    }
 
 }
