@@ -1,33 +1,8 @@
-
-<div class='panel-body'>
-  <div class="row">
-    <div>
-      <!--<h4 class="col15">Result: <button {{action "save"}} class="btn btn-default btn-right"> Save</button></h4>-->
-      <h4 class="col15">Result: <button class="btn btn-default btn-right"> Save</button></h4>
-    </div>
-  </div>
-
-
-  <div class="row">
-
-    <div class="form-group col15" style="overflow:hidden;height:50vh">
-      <!--{{handson-table id="spreadsheet" menu=menu beforeRemoveRow=beforeRemoveRow rows=rows columns=columns fixedColumns=1}}-->
-      <hotTable [data]="data"
-           [colHeaders]="colHeaders"
-           [columns]="columns"
-           [options]="options"
-      >
-        
-      </hotTable>
-    </div>
-
-  </div>
-
-  <div class="row">
-    <div class="col15">
-      <!--<button {{action "save"}} class="btn btn-default btn-right"> Save</button>-->
-      <button class="btn btn-default btn-right"> Save</button>
-    </div>
-  </div>
-
-</div>
+<!--{{handson-table id="spreadsheet" menu=menu beforeRemoveRow=beforeRemoveRow rows=rows columns=columns fixedColumns=1}}-->
+<hotTable [data]="data"
+      [colHeaders]="colHeaders"
+      [columns]="columns"
+      [options]="options"
+>
+  
+</hotTable>
